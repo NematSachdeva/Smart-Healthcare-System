@@ -22,6 +22,10 @@ import Unauthorized from './pages/Unauthorized';
 import NotFound from './pages/NotFound';
 
 function App() {
+  // Debug info
+  console.log('App loading...');
+  console.log('API URL:', process.env.REACT_APP_API_URL);
+  
   return (
     <AuthProvider>
       <Router>
