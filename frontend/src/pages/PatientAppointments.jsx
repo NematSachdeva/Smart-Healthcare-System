@@ -22,7 +22,7 @@ const PatientAppointments = () => {
 
   useEffect(() => {
     filterAppointments();
-  }, [appointments, statusFilter]);
+  }, [appointments, statusFilter, filterAppointments]);
 
   const fetchAppointments = async () => {
     setLoading(true);

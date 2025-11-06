@@ -24,7 +24,7 @@ const DoctorPrescriptions = () => {
 
   useEffect(() => {
     filterPrescriptions();
-  }, [prescriptions, statusFilter]);
+  }, [prescriptions, statusFilter, filterPrescriptions]);
 
   const fetchPrescriptions = async () => {
     setLoading(true);

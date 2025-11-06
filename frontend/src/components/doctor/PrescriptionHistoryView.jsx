@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { get } from '../../utils/api';
 import Card from '../common/Card';
@@ -20,9 +20,9 @@ const PrescriptionHistoryView = () => {
 
   useEffect(() => {
     fetchHistory();
-  }, [prescriptionId]);
+  }, [prescriptionId, fetchHistory]);
 
-  const fetchHistory = async () => {
+  const fetchHistory = useCallback(async () => {
     setLoading(true);
     setError('');
 
@@ -63,7 +63,7 @@ const PrescriptionHistoryView = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [prescriptionId]);
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
