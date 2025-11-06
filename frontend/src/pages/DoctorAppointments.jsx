@@ -24,7 +24,7 @@ const DoctorAppointments = () => {
 
   useEffect(() => {
     filterAppointments();
-  }, [appointments, statusFilter, filterAppointments]);
+  }, [appointments, statusFilter]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchAppointments = async () => {
     setLoading(true);

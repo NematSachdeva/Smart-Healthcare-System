@@ -24,7 +24,7 @@ const DoctorPrescriptions = () => {
 
   useEffect(() => {
     filterPrescriptions();
-  }, [prescriptions, statusFilter, filterPrescriptions]);
+  }, [prescriptions, statusFilter]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchPrescriptions = async () => {
     setLoading(true);

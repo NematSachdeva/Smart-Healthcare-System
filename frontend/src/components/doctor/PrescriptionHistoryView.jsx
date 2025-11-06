@@ -20,7 +20,7 @@ const PrescriptionHistoryView = () => {
 
   useEffect(() => {
     fetchHistory();
-  }, [prescriptionId, fetchHistory]);
+  }, [prescriptionId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchHistory = useCallback(async () => {
     setLoading(true);

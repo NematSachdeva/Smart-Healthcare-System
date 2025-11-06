@@ -24,7 +24,7 @@ const UserManagement = () => {
 
   useEffect(() => {
     filterUsers();
-  }, [users, searchTerm, roleFilter, filterUsers]);
+  }, [users, searchTerm, roleFilter]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchUsers = async () => {
     try {
