@@ -11,6 +11,30 @@
   ],
   "routes": [
     {
+      "src": "/static/css/(.*)",
+      "headers": {
+        "Content-Type": "text/css"
+      }
+    },
+    {
+      "src": "/static/js/(.*)",
+      "headers": {
+        "Content-Type": "application/javascript"
+      }
+    },
+    {
+      "src": "/static/(.*)"
+    },
+    {
+      "src": "/manifest.json"
+    },
+    {
+      "src": "/favicon.ico"
+    },
+    {
+      "src": "/(.*\\.(js|css|ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|json))"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }

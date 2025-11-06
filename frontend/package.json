@@ -2,6 +2,7 @@
   "name": "smart-healthcare-frontend",
   "version": "1.0.0",
   "description": "Frontend application for Smart Healthcare Appointment & AI Prescription System",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
@@ -24,7 +25,7 @@
     "build:prod": "CI=false DISABLE_ESLINT_PLUGIN=true react-scripts build",
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "vercel-build": "CI=false DISABLE_ESLINT_PLUGIN=true react-scripts build"
+    "vercel-build": "CI=false DISABLE_ESLINT_PLUGIN=true PUBLIC_URL=. react-scripts build"
   },
   "eslintConfig": {
     "extends": [
